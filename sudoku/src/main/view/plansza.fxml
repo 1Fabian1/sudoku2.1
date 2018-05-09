@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+      minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1"
+      fx:controller="main.controller.ControllerGlowny">
+    <children>
+        <MenuBar fx:id="menuBar">
+            <menus>
+                <Menu fx:id="start" mnemonicParsing="false" text="Start">
+                    <items>
+                        <MenuItem fx:id="lawtwy" mnemonicParsing="false" onAction="#startLatwy" text="Łatwy"/>
+                        <MenuItem fx:id="sredni" mnemonicParsing="false" onAction="#startSredni" text="Średni"/>
+                        <MenuItem fx:id="trudny" mnemonicParsing="false" onAction="#startTrudny" text="Trudny"/>
+                    </items>
+                </Menu>
+                <Menu fx:id="edycja" mnemonicParsing="false" text="Plansza">
+                    <items>
+                        <MenuItem fx:id="zapisz" mnemonicParsing="false" onAction="#zapisuj" text="Zapisz"/>
+                        <MenuItem fx:id="wczytaj" mnemonicParsing="false" onAction="#wczytuj" text="Wczytaj"/>
+                        <MenuItem fx:id="drukuj" mnemonicParsing="false" onAction="#wydrukuj" text="Drukuj"/>
+                    </items>
+                </Menu>
+                <Menu fx:id="menuSolver" mnemonicParsing="false" text="Solver">
+                    <items>
+                        <MenuItem fx:id="podpowiedz" mnemonicParsing="false" onAction="#podpowiedz" text="Podpowiedź"/>
+                        <MenuItem fx:id="rozwiaz" mnemonicParsing="false" onAction="#rozwiaz" text="Rozwiąż"/>
+                    </items>
+                </Menu>
+                <Menu fx:id="menuOpcje" mnemonicParsing="false" text="Opcje">
+                    <items>
+                        <MenuItem fx:id="menuItemPokazTabele1" mnemonicParsing="false" onAction="#pokazTabele"
+                                  text="Pokaż tabelę"/>
+                        <MenuItem fx:id="menuItemZamknij" mnemonicParsing="false" onAction="#Zamknij" text="Zamknij"/>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <Label fx:id="labelKomunikacja" text="Labela">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <GridPane fx:id="GridPane" gridLinesVisible="true" VBox.vgrow="ALWAYS">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <children>
+                <TextField fx:id="f00"/>
+                <TextField fx:id="f10" GridPane.columnIndex="1"/>
+                <TextField fx:id="f20" GridPane.columnIndex="2"/>
+                <TextField id="f30" fx:id="f30" stylesheets="@style.css" GridPane.columnIndex="3"/>
+                <TextField id="f40" fx:id="f40" stylesheets="@style.css" GridPane.columnIndex="4"/>
+                <TextField id="f50" fx:id="f50" stylesheets="@style.css" GridPane.columnIndex="5"/>
+                <TextField fx:id="f60" GridPane.columnIndex="6"/>
+                <TextField fx:id="f70" GridPane.columnIndex="7"/>
+                <TextField fx:id="f80" GridPane.columnIndex="8"/>
+                <TextField fx:id="f01" GridPane.rowIndex="1"/>
+                <TextField fx:id="f11" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                <TextField fx:id="f21" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+                <TextField id="f31" fx:id="f31" stylesheets="@style.css" GridPane.columnIndex="3"
+                           GridPane.rowIndex="1"/>
+                <TextField id="f41" fx:id="f41" stylesheets="@style.css" GridPane.columnIndex="4"
+                           GridPane.rowIndex="1"/>
+                <TextField id="f51" fx:id="f51" stylesheets="@style.css" GridPane.columnIndex="5"
+                           GridPane.rowIndex="1"/>
+                <TextField fx:id="f61" GridPane.columnIndex="6" GridPane.rowIndex="1"/>
+                <TextField fx:id="f71" GridPane.columnIndex="7" GridPane.rowIndex="1"/>
+                <TextField fx:id="f81" GridPane.columnIndex="8" GridPane.rowIndex="1"/>
+                <TextField fx:id="f02" GridPane.rowIndex="2"/>
+                <TextField fx:id="f12" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                <TextField fx:id="f22" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+                <TextField id="f32" fx:id="f32" stylesheets="@style.css" GridPane.columnIndex="3"
+                           GridPane.rowIndex="2"/>
+                <TextField id="f42" fx:id="f42" stylesheets="@style.css" GridPane.columnIndex="4"
+                           GridPane.rowIndex="2"/>
+                <TextField id="f52" fx:id="f52" stylesheets="@style.css" GridPane.columnIndex="5"
+                           GridPane.rowIndex="2"/>
+                <TextField fx:id="f62" GridPane.columnIndex="6" GridPane.rowIndex="2"/>
+                <TextField fx:id="f72" GridPane.columnIndex="7" GridPane.rowIndex="2"/>
+                <TextField fx:id="f82" GridPane.columnIndex="8" GridPane.rowIndex="2"/>
+                <TextField id="f03" fx:id="f03" stylesheets="@style.css" GridPane.rowIndex="3"/>
+                <TextField id="f13" fx:id="f13" stylesheets="@style.css" GridPane.columnIndex="1"
+                           GridPane.rowIndex="3"/>
+                <TextField id="f23" fx:id="f23" stylesheets="@style.css" GridPane.columnIndex="2"
+                           GridPane.rowIndex="3"/>
+                <TextField fx:id="f33" GridPane.columnIndex="3" GridPane.rowIndex="3"/>
+                <TextField fx:id="f43" GridPane.columnIndex="4" GridPane.rowIndex="3"/>
+                <TextField fx:id="f53" GridPane.columnIndex="5" GridPane.rowIndex="3"/>
+                <TextField id="f63" fx:id="f63" stylesheets="@style.css" GridPane.columnIndex="6"
+                           GridPane.rowIndex="3"/>
+                <TextField id="f73" fx:id="f73" stylesheets="@style.css" GridPane.columnIndex="7"
+                           GridPane.rowIndex="3"/>
+                <TextField id="f83" fx:id="f83" stylesheets="@style.css" GridPane.columnIndex="8"
+                           GridPane.rowIndex="3"/>
+                <TextField id="f04" fx:id="f04" stylesheets="@style.css" GridPane.rowIndex="4"/>
+                <TextField id="f14" fx:id="f14" stylesheets="@style.css" GridPane.columnIndex="1"
+                           GridPane.rowIndex="4"/>
+                <TextField id="f24" fx:id="f24" stylesheets="@style.css" GridPane.columnIndex="2"
+                           GridPane.rowIndex="4"/>
+                <TextField fx:id="f34" GridPane.columnIndex="3" GridPane.rowIndex="4"/>
+                <TextField fx:id="f44" GridPane.columnIndex="4" GridPane.rowIndex="4"/>
+                <TextField fx:id="f54" GridPane.columnIndex="5" GridPane.rowIndex="4"/>
+                <TextField id="f64" fx:id="f64" stylesheets="@style.css" GridPane.columnIndex="6"
+                           GridPane.rowIndex="4"/>
+                <TextField id="f74" fx:id="f74" stylesheets="@style.css" GridPane.columnIndex="7"
+                           GridPane.rowIndex="4"/>
+                <TextField id="f84" fx:id="f84" stylesheets="@style.css" GridPane.columnIndex="8"
+                           GridPane.rowIndex="4"/>
+                <TextField id="f05" fx:id="f05" stylesheets="@style.css" GridPane.rowIndex="5"/>
+                <TextField id="f15" fx:id="f15" stylesheets="@style.css" GridPane.columnIndex="1"
+                           GridPane.rowIndex="5"/>
+                <TextField id="f25" fx:id="f25" stylesheets="@style.css" GridPane.columnIndex="2"
+                           GridPane.rowIndex="5"/>
+                <TextField fx:id="f35" GridPane.columnIndex="3" GridPane.rowIndex="5"/>
+                <TextField fx:id="f45" GridPane.columnIndex="4" GridPane.rowIndex="5"/>
+                <TextField fx:id="f55" GridPane.columnIndex="5" GridPane.rowIndex="5"/>
+                <TextField id="f65" fx:id="f65" stylesheets="@style.css" GridPane.columnIndex="6"
+                           GridPane.rowIndex="5"/>
+                <TextField id="f75" fx:id="f75" stylesheets="@style.css" GridPane.columnIndex="7"
+                           GridPane.rowIndex="5"/>
+                <TextField id="f85" fx:id="f85" stylesheets="@style.css" GridPane.columnIndex="8"
+                           GridPane.rowIndex="5"/>
+                <TextField fx:id="f06" GridPane.rowIndex="6"/>
+                <TextField fx:id="f16" GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+                <TextField fx:id="f26" GridPane.columnIndex="2" GridPane.rowIndex="6"/>
+                <TextField id="f36" fx:id="f36" stylesheets="@style.css" GridPane.columnIndex="3"
+                           GridPane.rowIndex="6"/>
+                <TextField id="f46" fx:id="f46" stylesheets="@style.css" GridPane.columnIndex="4"
+                           GridPane.rowIndex="6"/>
+                <TextField id="f56" fx:id="f56" stylesheets="@style.css" GridPane.columnIndex="5"
+                           GridPane.rowIndex="6"/>
+                <TextField fx:id="f66" GridPane.columnIndex="6" GridPane.rowIndex="6"/>
+                <TextField fx:id="f76" GridPane.columnIndex="7" GridPane.rowIndex="6"/>
+                <TextField fx:id="f86" GridPane.columnIndex="8" GridPane.rowIndex="6"/>
+                <TextField fx:id="f07" GridPane.rowIndex="7"/>
+                <TextField fx:id="f17" GridPane.columnIndex="1" GridPane.rowIndex="7"/>
+                <TextField fx:id="f27" GridPane.columnIndex="2" GridPane.rowIndex="7"/>
+                <TextField id="f37" fx:id="f37" stylesheets="@style.css" GridPane.columnIndex="3"
+                           GridPane.rowIndex="7"/>
+                <TextField id="f47" fx:id="f47" stylesheets="@style.css" GridPane.columnIndex="4"
+                           GridPane.rowIndex="7"/>
+                <TextField id="f57" fx:id="f57" stylesheets="@style.css" GridPane.columnIndex="5"
+                           GridPane.rowIndex="7"/>
+                <TextField fx:id="f67" GridPane.columnIndex="6" GridPane.rowIndex="7"/>
+                <TextField fx:id="f77" GridPane.columnIndex="7" GridPane.rowIndex="7"/>
+                <TextField fx:id="f87" GridPane.columnIndex="8" GridPane.rowIndex="7"/>
+                <TextField fx:id="f08" GridPane.rowIndex="8"/>
+                <TextField fx:id="f18" GridPane.columnIndex="1" GridPane.rowIndex="8"/>
+                <TextField fx:id="f28" GridPane.columnIndex="2" GridPane.rowIndex="8"/>
+                <TextField id="f38" fx:id="f38" stylesheets="@style.css" GridPane.columnIndex="3"
+                           GridPane.rowIndex="8"/>
+                <TextField id="f48" fx:id="f48" stylesheets="@style.css" GridPane.columnIndex="4"
+                           GridPane.rowIndex="8"/>
+                <TextField id="f58" fx:id="f58" stylesheets="@style.css" GridPane.columnIndex="5"
+                           GridPane.rowIndex="8"/>
+                <TextField fx:id="f68" GridPane.columnIndex="6" GridPane.rowIndex="8"/>
+                <TextField fx:id="f78" GridPane.columnIndex="7" GridPane.rowIndex="8"/>
+                <TextField fx:id="f88" GridPane.columnIndex="8" GridPane.rowIndex="8"/>
+            </children>
+        </GridPane>
+    </children>
+</VBox>
