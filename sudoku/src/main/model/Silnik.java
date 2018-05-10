@@ -36,7 +36,7 @@ public class Silnik {
     public int[][] uruchom(int[][] tabela, int ileUsunac) {
         System.out.println("Pokaż tabele na wejsciu");
         pokazTabele(tabela);
-        System.out.println("tabela na wejściu " + validateV2(tabela));
+        System.out.println("tabela na wejściu " + walidacja(tabela));
 
         //mieszanie
         System.out.println("mieszanie");
@@ -48,7 +48,7 @@ public class Silnik {
 
         usuwaniePol(ileUsunac);
         pokazTabele(tabela);
-        System.out.println("Czy tabela jest poprawna " + validateV2(getTabela()));
+        System.out.println("Czy tabela jest poprawna " + walidacja(getTabela()));
         return tabela;
     }
 
@@ -341,7 +341,7 @@ public class Silnik {
 
     public boolean czyWygrana(int[][] board) {
         int licznik = 0;
-        if (validateV2(board)) {
+        if (walidacja(board)) {
             for (int i = 0; i < dlugoscTabeli; i++) {
                 for (int j = 0; j < dlugoscTabeli; j++) {
                     if (board[i][j] != 0) {
@@ -384,7 +384,7 @@ public class Silnik {
 
             tempTab[wiersz][kolumna] = cyfra;
             setTabela(tempTab);
-            czyMozna = validateV2(getTabela());
+            czyMozna = walidacja(getTabela());
 
             if (czyMozna) {
                 labelKomunikacja.setText("pomyślnie wsatwiono: " + getTabela()[wiersz][kolumna]);
@@ -409,7 +409,7 @@ public class Silnik {
         }
     }
 
-    public boolean validateV2(int[][] grid) {
+    public boolean walidacja(int[][] grid) {
         for (int i = 0; i < 9; i++) {
             boolean[] row = new boolean[10];
             boolean[] col = new boolean[10];

@@ -337,7 +337,7 @@ public class ControllerGlowny implements Initializable {
     @FXML
     void pokazTabele(ActionEvent event) {
         silnik.pokazTabele(silnik.getTabela());
-        System.out.println("Czy poprawna " + silnik.validateV2(silnik.getTabela()));
+        System.out.println("Czy poprawna " + silnik.walidacja(silnik.getTabela()));
     }
 
     @FXML
@@ -395,7 +395,7 @@ public class ControllerGlowny implements Initializable {
         Solver solver = new Solver(silnik.getTabela());
         solver.solve();
         parujTextFieldZTabela();
-        if (silnik.validateV2(silnik.getTabela()) && silnik.czyWygrana(silnik.getTabela())) {
+        if (silnik.walidacja(silnik.getTabela()) && silnik.czyWygrana(silnik.getTabela())) {
             labelKomunikacja.setText("Brawo Wygrałeś");
         } else {
             System.out.println("ponowna próba");

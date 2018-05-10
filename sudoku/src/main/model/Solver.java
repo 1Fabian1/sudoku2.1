@@ -90,6 +90,8 @@ public class Solver {
         return false;
     }
 
+
+    //podpowiedź
     public int[][] hint(int[][] tabela, Label labelKomunikacja) {
         Random random = new Random();
         Silnik silnik = new Silnik();
@@ -108,14 +110,14 @@ public class Solver {
             }
         }
         if (tabela[x][y] == 0) {
-            canDo = silnik.validateV2(tabela);
+            canDo = silnik.walidacja(tabela);
             while (canDo) {
                 tabela[x][y] = podnies;
                 podnies++;
-                if (silnik.validateV2(tabela)) canDo = false;
+                if (silnik.walidacja(tabela)) canDo = false;
             }
             labelKomunikacja.setText("Wstawiono podpowiedź " + (podnies - 1) + " w pole x" + x + " y" + y);
-            System.out.println("czy poprawne " + silnik.validateV2(tabela));
+            System.out.println("czy poprawne " + silnik.walidacja(tabela));
         }
         return tabela;
     }

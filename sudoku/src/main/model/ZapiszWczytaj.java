@@ -97,7 +97,7 @@ public class ZapiszWczytaj extends Silnik implements Serializable {
             }
         }
         setTabela(tabelaPom);
-        if (!validateV2(getTabela())) {
+        if (!walidacja(getTabela())) {
             labelKomunikacja.setText("Nie udało się poprawnie wczytać planszy");
             return null;
         } else {
